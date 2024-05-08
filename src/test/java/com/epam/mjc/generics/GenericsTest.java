@@ -67,9 +67,9 @@ public class GenericsTest {
     @Test
     public void testGenericCloneHasIsNotRaw() {
         List<String> list = parseGenericsClass();
-        assertTrue("In line " + (list.indexOf(getLineWithString(list, "clone")) + 1) + ", List shouldn't be raw",
+        assertTrue("In line " + (list.indexOf(getLineWithString(list, "clone")) + 1) + ", List shouldn't be raw super",
                 getLineWithString(list, "clone").contains("List<? super T>"));
-        assertTrue("In line " + (list.indexOf(getLineWithString(list, "clone")) + 1) + ", List shouldn't be raw",
+        assertTrue("In line " + (list.indexOf(getLineWithString(list, "clone")) + 1) + ", List shouldn't be raw extends",
                 getLineWithString(list, "clone").contains("List<? extends T>"));
     }
 
